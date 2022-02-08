@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>News Media</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><span>T</span>etra<span>N</span>ews</div>
+            <div class="menuguide">
+                <form class="search-box">
+                    <button type="submit"><i class="fas fa-search search-icon"></i></button>
+                    <input type="text" placeholder="Search" id="search" name="search">
+                </form>
+                <p><a href="#login" id="login">Login</a></p>
+                <p id="separator">|</p>
+                <p><a href="#help" id="help">Help</a></p>
+            </div>
+        </header>
+        <section class="homepage">
+            <div class="homepage-featured">
+                <div class="slide-left"><i class="fas fa-chevron-left fa-5x"></i></div>
+                <div class="slide-center">
+                    <h1>TetraNews</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto dignissimos sapiente ea temporibus atque provident dolore voluptatibus sunt odio adipisci officiis, praesentium quae esse at ipsum modi porro laudantium quas quaerat mollitia. Soluta minima saepe ullam.</p>
+                </div>
+                <div class="slide-right"><i class="fas fa-chevron-right fa-5x"></i></div>
+            </div>
+            <!-- radio button scroll -->
+            <div id="scroll-homepageimage">
+                <input type="radio" name="homepageimage" id="hpi">
+                <input type="radio" name="homepageimage" id="hpi">
+                <input type="radio" name="homepageimage" id="hpi">
+                <input type="radio" name="homepageimage" id="hpi">
+                <input type="radio" name="homepageimage" id="hpi">
+            </div>
+        </section>
+        <!-- Newsletter content body -->
+        <div class="news-wrapper">
+            <aside class="navbar">
+                <div class="navItems item1"><a href="#about">About</a></div>
+                <div class="navItems item2"><a href="#service">Services</a></div>
+                <div class="navItems item3"><a href="contact">Contact</a></div>
+                <div class="navItems item4"><a href="#reg">Registration</a></div>
+                <div class="navItems item5"><a href="#help">Help</a></div>
+            </aside>
+            <main class="news-body">
+                <div class="trendingnews">
+                    <div class="exclusive">
+                        <p>Exclusive</p>
+                    </div>
+                    <div class="trendingnews__details">
+                        <p id="date">Tuesday 8, February 2022</p>
+                        <p id="title">Andela Commences Recruitment for Software Engineers</p>
+                        <p id="news-brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem porro eum nostrum sapiente, dolor aut molestias consequuntur et neque magni facilis? Ducimus impedit assumenda porro voluptatum laborum debitis sequi ex.</p>
+                        <button type="submit">Read More ></button>
+                    </div>
+                </div>
+                <p class="latestnews">Latest News</p>
+                <!-- newspage -->
+                <div class="newspage">
+                    <div class="newscard">
+                        <p id="date">Tuesday 8, February 2022</p>
+                        <p id="title">Intern for Frontend Engineers</p>
+                        <img src="" alt="news-featured-image">
+                        <p id="news-brief">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam totam ea animi.</p>
+                    </div>
+                    <div class="newscard">
+                        <p id="date">Tuesday 8, February 2022</p>
+                        <p id="title">Intern for Frontend Engineers</p>
+                        <img src="" alt="news-featured-image">
+                        <p id="news-brief">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam totam ea animi.</p>
+                    </div>
+                    <div class="newscard">
+                        <p id="date">Tuesday 8, February 2022</p>
+                        <p id="title">Intern for Frontend Engineers</p>
+                        <img src="" alt="news-featured-image">
+                        <p id="news-brief">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam totam ea animi.</p>
+                    </div>
+                    <div class="newscard">
+                        <p id="date">Tuesday 8, February 2022</p>
+                        <p id="title">Intern for Frontend Engineers</p>
+                        <img src="" alt="news-featured-image">
+                        <p id="news-brief">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam totam ea animi.</p>
+                    </div>
+                </div>
+                <!-- employees section -->
+                <div class="employee-container">
+                    <div class="employee">Employees you follow</div>
+                    <div class="employee">All employees</div>
+                    <div class="employee">Search employees</div>
+                </div>
+                <div class="employee-image-slide">
+                    <div class="slide-left"><i class="fas fa-chevron-left"></i></div>
+                    <div class="employee-image"><img src="" alt="employee-image"></div>
+                    <div class="employee-image"><img src="" alt="employee-image"></div>
+                    <div class="employee-image"><img src="" alt="employee-image"></div>
+                    <div class="employee-image"><img src="" alt="employee-image"></div>
+                    <div class="employee-image"><img src="" alt="employee-image"></div>
+                    <div class="employee-image"><img src="" alt="employee-image"></div>
+                    <div class="employee-image"><img src="" alt="employee-image"></div>
+                    <div class="slide-left"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </main>
+            <aside class="news-right-sidebar">
+                <section class="featured">
+                    <div class="featured-projects">
+                        <p>Featured projects</p>
+                        <p><a href="">View all</a></p>
+                    </div>
+                    <!-- project 1 -->
+                    <div class="project">
+                        <div class="project-card"><img src="" alt="project-image"></div>
+                        <div class="project-details">
+                            <p>Weather Application</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quam impedit quaerat.</p>
+                        </div>
+                    </div>
+                    <!-- project 2 -->
+                    <div class="project">
+                        <div class="project-card"><img src="" alt="project-image"></div>
+                        <div class="project-details">
+                            <p>Contact List App</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quam impedit quaerat.</p>
+                        </div>
+                    </div>
+                    <!-- project 3 -->
+                    <div class="project">
+                        <div class="project-card"><img src="" alt="project-image"></div>
+                        <div class="project-details">
+                            <p>Twitter Web Template</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quam impedit quaerat.</p>
+                        </div>
+                    </div>
+                    <div id="project-select">
+                        <input type="radio" name="project" id="proj">
+                        <input type="radio" name="project" id="proj">
+                        <input type="radio" name="project" id="proj">
+                        <input type="radio" name="project" id="proj">
+                        <input type="radio" name="project" id="proj">
+                    </div>
+                </section>
+                <!-- Newest Docs layout -->
+                <section class="docs">
+                    <div class="newest-docs">
+                        <p>Newest Documents</p>
+                        <p><a href="">View all</a></p>
+                    </div>
+                    <div class="docs-wrapper">
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <img src="" alt="doc-card-image">
+                            <p>Pitch presentation</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Featured video layout -->
+                <section class="video">
+                    <div class="featured-video">
+                        <div class="video-header">
+                            <p>Newest Documents</p>
+                            <p><a href="">View all</a></p>
+                        </div>
+                        <video src=""></video>
+                        <div id="video-select">
+                            <input type="radio" name="vid" id="vid">
+                            <input type="radio" name="vid" id="vid">
+                            <input type="radio" name="vid" id="vid">
+                            <input type="radio" name="vid" id="vid">
+                            <input type="radio" name="vid" id="vid">
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+        <footer>
+            <p id="copyright">&copy; RollyJS - All Rights Reserved</p>
+            <p id="connect">Connect with me on 
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+            </p>
+        </footer>
+    </div>
+    
+</body>
+</html>

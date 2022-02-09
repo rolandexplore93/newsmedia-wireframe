@@ -7,13 +7,11 @@ html, body {
     margin: 0;
     padding: 0;
     background: #fff;
-    border: 1px solid brown;
 }
 
 .container {
     /* padding: 10px 30px; */
     width: 100%;
-    border: 1px solid green;
     background: #fff;
     margin: auto;
 }
@@ -37,6 +35,11 @@ header {
     font-style: italic;
     align-self: center;
     justify-self: center;
+}
+
+#logo {
+    text-decoration: none;
+    color: #000;
 }
 
 span {
@@ -91,9 +94,17 @@ span {
 }
 
 .homepage {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     margin: 80px 50px 0px 50px;
-    padding: 0px 10px;
+    padding: 80px 10px 0px;
+    background: #ddd;
+    background-image: url("images/breaking-news.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    color: #fff;
+    /* height: 400px; */
+    
 }
 
 .homepage-featured {
@@ -140,21 +151,22 @@ span {
 }
 
 .news-wrapper {
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
     margin: 20px 50px;
-    /* border: 1px solid red; */
+    /* background: #bbb; */
+    gap: 10px;
+    /* height: 600px; */
+    height: fit-content;
 }
 
-/* Newsletter content body styling */
+/* Newsletter layout styling */
+/* Navbar */
 .navbar {
-    grid-column: 1/3;
-    border: 1px solid red;
-}
-
-.navItems {
-    margin-bottom: 20px;
+    flex: 1;
+    /* border: 1px solid red; */
+    background: #eee;
+    height: fit-content;
+    padding: 5px 10px;
 }
 
 .navbar a {
@@ -163,24 +175,39 @@ span {
     cursor: pointer;
 }
 
+.navbar a:hover {
+    color: #CC1919;
+}
 
+.navItems {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.navItems > a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navItems > div {
+    font-size: 0.8rem;
+}
+
+
+/* News-body */
 .news-body {
-    grid-column: 3/9;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 200px 100px;
-    border: 1px solid green;
-    margin-right: 5px;
-
+    /* grid-column: 3/9; */
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    gap: 10px;
 }
 
 .trendingnews {
-    grid-column: 1/3;
-    grid-row: 1/2;
     display: flex;
-    height: 220px;
     gap: 10px;
-    border: 1px solid red;
 }
 
 /* .newspage {
@@ -190,57 +217,336 @@ span {
 .exclusive {
     border: 1px solid #000;
     flex: 1;
+    background-image: url('images/hotnews.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 50%;
 }
 
 .exclusive > p {
     border: 1px solid #000;
+    border-top: 0;
+    border-left: 0;
     color: #CC1919;
     text-transform: uppercase;
     margin: 0;
     padding: 10px 10px;
     width: 140px;
     border-bottom-right-radius: 45px;
+    font-weight: bold;
 }
 
 .trendingnews__details {
     flex: 1;
-    padding: 0px 10px;
+    padding: 10px 0 0 5px;
     /* background: red; */
-    border: 1px solid #eee;
-    box-shadow: 2px 2px 2px #eee;
+    border: 1px solid #000;
+    background-color: #eee;
+
 }
 
-#date, #title, #news-brief {
+#date, #news-brief {
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.3;
+    font-size: 0.8rem;
+}
+
+#date {
+    color: #CC1919;
+}
+
+#read-more {
+    font-size: 0.8rem;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+    margin-top: 10px;
+}
+
+.newscard {
+    background-color: #eee;
 }
 
 #title {
     font-weight: bolder;
     font-size: 1.2rem;
+    margin: 0;
+    line-height: 1.3;
+    height: 50px;
 }
 
 .latestnews {
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    border: 1px solid blue;
-    /* height: 40px; */
-    align-self: center;
+    text-transform: uppercase;
     padding: 10px 10px;
-    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0;
+    color: #fff;
+    background: #CC1919;
 }
 
 .newspage {
-    grid-column: 1/3;
-    grid-row: 3/5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    row-gap: 20px;
+}
+
+.newspage > div {
+    border: 1px solid #000;
+}
+
+.newscard > img {
+    width: 100%;
+    height: 120px;
+    /* border: 1px solid #000; */
+}
+
+
+.employee-container {
+    /* border: 1px solid #000; */
+    display: flex;
+    margin-top: 20px;
+}
+
+.employee {
+    border: 1px solid #000;
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.employee:hover {
+    background-color: #ddd;
+}
+
+.employee-image-slide {
+    display: flex;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.employee-image {
+    flex: 1;
+    border: 1px solid white;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /* transition: 0.5s ease; */
+    /* background: #000; */
+    background: #CC1919;
 }
 
 
 
+.employee-image:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.text {
+    color: #fff;
+    font-size: 0.7rem;
+    position: absolute;
+    word-break: break-all;
+    padding-left: 10px;
+}
+
+.leftscroll-emp-img {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.rightscroll-emp-img {
+    position: absolute;
+    right: 0;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+/* .news-right-sidebar */
 .news-right-sidebar {
-    grid-column: 9/13;
-    border: 1px solid blue;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
 }
+
+.featured {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-nav {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding: 0px 10px;
+    font-size: 0.7rem;
+    border: 0;
+    color: #fff;
+    background: #CC1919;
+}
+
+.featured-nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.project {
+    display: flex;
+    gap: 5px;
+    /* place-items: center center; */
+    background: #ddd;
+    box-shadow: 0px 1px 1px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+}
+
+.pro1 {
+    margin-top: 10px;
+}
+
+.project > img {
+    width: 100%;
+    flex: 1;
+    height: 69px;
+}
+
+.project-details {
+    flex: 2;
+}
+
+.project-details p:first-child {
+    /* border: 1px solid red; */
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+
+}
+
+.project-details p:nth-child(2){
+    /* border: 1px solid red; */
+    font-size: 0.8rem;
+    margin: 0;
+    margin-top: 5px;
+}
+
+#project-select {
+    display: flex;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+#project-select::before {
+    content: "";
+    flex: 1;
+    /* border: 1px solid blue; */
+}
+
+#project-select > div {
+    flex: 2;
+    border: 0;
+}
+
+/* Docs layout */
+.docs {
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.docs > div {
+    /* border: 1px solid #000; */
+    margin-bottom: 10px;
+}
+
+.docs-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.doc-card {
+    background: #ddd;
+    box-shadow: 1px 2px 2px;
+    border: 1px solid #000;
+}
+
+.doc-card > img {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+
+.doc-card > p {
+    margin: -3px 0 0 0;
+    font-size: 0.7rem;
+    color: #CC1919;
+    padding: 2px 0px;
+
+}
+
+/* Featured video layout style */
+.video {
+    display: flex;
+    flex-direction: column;
+}
+
+.video > div, .video > video {
+    /* border: 1px solid #fff; */
+}
+
+#video-select {
+    display: flex;
+}
+
+#video-select::before {
+    content: "";
+    flex: 1;
+    /* border: 1px solid blue; */
+}
+
+#video-select > div {
+    flex: 2;
+}
+
+footer {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    /* border-top: 1px solid #000; */
+    color: #fff;
+    padding: 50px 0;
+}
+
+footer i {
+    color: #fff;
+}
+
+footer i:hover {
+    color: #ddd;
+    background-color: #000;
+}
+
 
 
 
